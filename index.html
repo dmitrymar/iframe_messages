@@ -2,12 +2,11 @@
     <head></head>
     <body>
 	    <h2>Frame B</h2>
-	    
-	    <h4>Go to <a href="http://output.jsbin.com/jagibuq">Frame A</a> to see this in action</h4>
+	    <p>Frame B sends data to <a href="http://output.jsbin.com/jagibuq">Frame A</a>  This frame will be an iframe inside Frame A</p> 
 	    <button onclick="sendMessage({status:'cancel'});">Cancel</button>
         <script>
 	   function sendMessage(message) {
-            top.postMessage(message, 'http://output.jsbin.com');
+            top.postMessage(message, '*');
 	   }
         </script>
     </body>
